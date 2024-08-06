@@ -1009,6 +1009,30 @@ video {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
+.bg-\[url\(\'img\/commercial\.webp\'\)\] {
+  background-image: url('img/commercial.webp');
+}
+
+.bg-\[url\(\'img\/residential\.webp\'\)\] {
+  background-image: url('img/residential.webp');
+}
+
+.bg-\[url\(\'img\/asphalt\.jpg\'\)\] {
+  background-image: url('img/asphalt.jpg');
+}
+
+.bg-\[url\(\'img\/cedar\.jpg\'\)\] {
+  background-image: url('img/cedar.jpg');
+}
+
+.bg-\[url\(\'img\/metal\.jpg\'\)\] {
+  background-image: url('img/metal.jpg');
+}
+
+.bg-\[url\(\'img\/tile\.jpg\'\)\] {
+  background-image: url('img/tile.jpg');
+}
+
 .from-\[\#000\] {
   --tw-gradient-from: #000 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
