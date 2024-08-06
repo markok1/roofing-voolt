@@ -1,0 +1,432 @@
+.testimonials2 {
+  background: var(--color-secondary, #b3d184);
+}
+.testimonials2 .split {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.testimonials2 .wrapper {
+  display: flex;
+  padding-bottom: 60px;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1440px;
+  margin: auto;
+}
+.testimonials2 .wrapper h2 {
+  padding-top: 52px;
+}
+.testimonials2 .stars {
+  display: flex;
+  gap: 2px;
+}
+.testimonials2 .testimonial-holder {
+  margin: 0px -4px;
+}
+.testimonials2 .testimonial-holder .slick-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: unset;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+}
+.testimonials2 .testimonial-holder .slick-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: unset;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+}
+.testimonials2 .testimonial-holder .slick-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 15px;
+}
+.testimonials2 .testimonial-holder .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  border: unset;
+  background-color: var(--color-neutral-grey-light, rgba(17, 17, 17, 0.07));
+  transition: all 0.25s ease-in;
+}
+.testimonials2 .testimonial-holder .slick-dots .slick-active button {
+  background-color: var(--color-accent, #8dc63f);
+  transition: all 0.25s ease-in;
+}
+.testimonials2 .testimonial {
+  margin: 0px 4px;
+  display: flex;
+  padding: var(--padding-20, 20px) var(--padding-16, 16px);
+  flex-direction: column;
+  gap: var(--spacing-12, 12px);
+  border-radius: var(--border-4, 4px);
+  border: 1px solid var(--color-neutral-grey-light, rgba(17, 17, 17, 0.07));
+  background: var(--color-neutral-white, #fff);
+}
+.testimonials2 .testimonial-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+}
+.testimonials2 .testimonial-top .image {
+  max-width: 48px;
+  max-height: 48px;
+}
+.testimonials2 .testimonial-top .image img {
+  border-radius: 48px;
+}
+.testimonials2 .testimonial-top div .text:first-child {
+  font-weight: 600;
+}
+.testimonials2 .testimonial-top div .text:last-child {
+  color: var(--color-neutral-grey-dark, rgba(17, 17, 17, 0.64));
+}
+.testimonials2 .testimonial-top .google-icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.testimonials2 .bottom-boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-16, 16px);
+  width: 100%;
+}
+.testimonials2 .bottom-boxes .small-text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.testimonials2 .bottom-boxes .small-text-box > div {
+  display: flex;
+  gap: var(--spacing-4, 4px);
+}
+.testimonials2 .bottom-boxes .small-text-box > div .text-small {
+  font-weight: 400;
+}
+.testimonials2 .primary-button {
+  display: flex;
+  padding: 4px var(--padding-8, 8px);
+  justify-content: center;
+  align-items: center;
+  max-width: 358px;
+  width: 100%;
+  margin: auto;
+  border-radius: var(--border-4, 4px);
+  border: 1px solid transparent;
+  background: var(--color-primary, #1a4b8a);
+  color: var(--color-neutral-white, #fff);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  transition: all 0.25s ease;
+}
+.testimonials2 .primary-button:hover {
+  transition: all 0.25s ease;
+  background: color-mix(in srgb, var(--color-primary), #000 50%);
+  box-shadow: 2px 3px 13px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 3px 13px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 3px 13px -4px rgba(0, 0, 0, 0.75);
+}
+
+.testimonials2--lightbg {
+  background: var(--color-background, #f0f3ff);
+}
+.testimonials2--lightbg .testimonial-holder .slick-dots .slick-active button {
+  background-color: var(--color-primary, #1a4b8a);
+  transition: all 0.25s ease-in;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials2 h2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .testimonials2 .wrapper {
+    gap: 60px;
+  }
+  .testimonials2 .primary-button {
+    max-width: 260px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .testimonials2 .wrapper h2 {
+    padding-top: 80px;
+  }
+  .testimonials2 .testimonial-holder {
+    margin: 0px -10px;
+  }
+  .testimonials2 .testimonial {
+    margin: 0px 10px;
+    opacity: 0.5;
+  }
+  .testimonials2 .slick-active {
+    opacity: 0.8;
+  }
+  .testimonials2 .slick-center {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .testimonials2 .testimonial-holder .slick-prev,
+  .testimonials2 .testimonial-holder .slick-next {
+    border: 1px solid var(--neutral-grey-light, rgba(17, 17, 17, 0.07));
+    background: var(--neutral-white, #fff);
+  }
+  .testimonials2 .testimonial-holder .slick-prev {
+    left: 0px;
+    width: 48px;
+    height: 48px;
+  }
+  .testimonials2 .testimonial-holder .slick-next {
+    right: 0px;
+    width: 48px;
+    height: 48px;
+  }
+}
+.gallery1 {
+  padding: var(--padding-40, 40px) 0px;
+  border-top: 1px solid var(--neutral-grey-light, rgba(17, 17, 17, 0.07));
+}
+.gallery1 .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1440px;
+  margin: auto;
+}
+.gallery1 .gallery-top {
+  display: flex;
+  padding: var(--padding-20, 20px) var(--padding-16, 16px) 0px var(--padding-16, 16px);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-16, 16px);
+}
+.gallery1 .sliders-holder {
+  position: relative;
+  padding: 0px 16px;
+}
+.gallery1 .sliders-holder .slick-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: unset;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+}
+.gallery1 .sliders-holder .slick-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: unset;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+}
+.gallery1 .single-slider {
+  margin-bottom: 12px;
+}
+.gallery1 .single-slider .big-image {
+  height: 358px;
+}
+.gallery1 .single-slider .big-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery1 .bottom-slider {
+  margin: 0 -6px;
+}
+.gallery1 .bottom-slider .small-image {
+  height: 80px;
+  margin: 0 6px;
+}
+.gallery1 .bottom-slider .small-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery1 .bottom-boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-16, 16px);
+  padding: 0px 16px;
+  width: 100%;
+}
+.gallery1 .bottom-boxes .small-text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.gallery1 .bottom-boxes .small-text-box > div {
+  display: flex;
+  gap: var(--spacing-4, 4px);
+}
+.gallery1 .primary-button {
+  display: flex;
+  padding: 4px var(--padding-8, 8px);
+  justify-content: center;
+  align-items: center;
+  max-width: 358px;
+  width: 100%;
+  margin: auto;
+  border-radius: var(--border-4, 4px);
+  border: 1px solid transparent;
+  background: var(--color-accent, #8dc63f);
+  color: var(--color-neutral-white, #fff);
+  font-family: var(--font-family-intertight, sans-serif);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  transition: all 0.25s ease;
+}
+.gallery1 .primary-button:hover {
+  transition: all 0.25s ease;
+  background: color-mix(in srgb, var(--color-accent), #000 50%);
+  box-shadow: 2px 3px 13px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 3px 13px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 3px 13px -4px rgba(0, 0, 0, 0.75);
+}
+
+@media screen and (min-width: 768px) {
+  .gallery1 .single-slider .big-image {
+    height: 450px;
+  }
+  .gallery1 .single-slider .big-image:nth-child(3) img {
+    -o-object-position: top;
+       object-position: top;
+  }
+  .gallery1 .single-slider .big-image:nth-child(8) img {
+    -o-object-position: top;
+       object-position: top;
+  }
+  .gallery1 .bottom-slider .small-image {
+    height: 120px;
+  }
+  .gallery1 .bottom-slider .small-image:nth-child(12) img {
+    -o-object-position: top;
+       object-position: top;
+  }
+  .gallery1 h2 {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; /* 120% */
+  }
+  .gallery1 .sub-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 30px;
+  }
+  .gallery1 .primary-button {
+    max-width: 230px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .gallery1 {
+    padding: var(--padding-80, 80px) 0px;
+  }
+  .gallery1 .wrapper {
+    gap: 19px;
+  }
+  .gallery1 .single-slider {
+    display: none;
+  }
+  .gallery1 .bottom-slider {
+    margin-bottom: 20px;
+  }
+  .gallery1 .bottom-slider .small-image {
+    height: 250px;
+  }
+  .gallery1 .sliders-holder .slick-prev,
+  .gallery1 .sliders-holder .slick-next {
+    border: 1px solid var(--neutral-grey-light, rgba(17, 17, 17, 0.07));
+    background: var(--neutral-white, #fff);
+  }
+  .gallery1 .gallery-top {
+    padding: 0px;
+    gap: 30px;
+    max-width: 780px;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery1 .bottom-slider {
+    padding: 0px 55px;
+  }
+  .gallery1 .sliders-holder .slick-prev {
+    left: 0px;
+    width: 48px;
+    height: 48px;
+  }
+  .gallery1 .sliders-holder .slick-next {
+    right: 0px;
+    width: 48px;
+    height: 48px;
+  }
+  .gallery1 .bottom-slider {
+    max-width: 1300px;
+    margin: 0 auto 20px auto;
+  }
+  .gallery1 .bottom-slider .small-image {
+    height: 280px;
+    margin: 0 8px;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .gallery1 .sliders-holder .slick-prev {
+    left: -24px;
+  }
+  .gallery1 .sliders-holder .slick-next {
+    right: -24px;
+  }
+}/*# sourceMappingURL=style.css.map */

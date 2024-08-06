@@ -1,0 +1,247 @@
+.testimonials2 {
+  background: var(--color-secondary, #b3d184);
+  // split is the white polygon(triangle) svg
+  .split {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .wrapper {
+    display: flex;
+    // padding: 0px var(--padding-16, 16px) var(--padding-80, 80px)
+    //   var(--padding-16, 16px);
+    padding-bottom: 60px;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 1440px;
+    margin: auto;
+    h2 {
+      padding-top: 52px;
+    }
+  }
+  .stars {
+    display: flex;
+    gap: 2px;
+  }
+  .testimonial-holder {
+    // counters the margin to make it center
+    margin: 0px -4px;
+    .slick-prev {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: unset;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.9);
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      width: 36px;
+      height: 36px;
+    }
+    .slick-next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: unset;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.9);
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      width: 36px;
+      height: 36px;
+    }
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding-top: 15px;
+      li {
+        button {
+          font-size: 0;
+          line-height: 0;
+          width: 10px;
+          height: 10px;
+          border-radius: 10px;
+          border: unset;
+          background-color: var(--color-neutral-grey-light, rgba(17, 17, 17, 0.07));
+          transition: all 0.25s ease-in;
+        }
+      }
+      .slick-active button {
+        background-color: var(--color-accent, #8dc63f);
+        transition: all 0.25s ease-in;
+      }
+    }
+  }
+  .testimonial {
+    //spacing between slides
+    margin: 0px 4px;
+    display: flex;
+    padding: var(--padding-20, 20px) var(--padding-16, 16px);
+    flex-direction: column;
+    gap: var(--spacing-12, 12px);
+
+    border-radius: var(--border-4, 4px);
+    border: 1px solid var(--color-neutral-grey-light, rgba(17, 17, 17, 0.07));
+    background: var(--color-neutral-white, #fff);
+  }
+  .testimonial-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    position: relative;
+    .image {
+      max-width: 48px;
+      max-height: 48px;
+      img {
+        border-radius: 48px;
+      }
+    }
+    div {
+      .text:first-child {
+        font-weight: 600;
+      }
+      .text:last-child {
+        color: var(--color-neutral-grey-dark, rgba(17, 17, 17, 0.64));
+      }
+    }
+    .google-icon {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+  }
+
+  .bottom-boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-16, 16px);
+    width: 100%;
+    .small-text-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      > div {
+        display: flex;
+        gap: var(--spacing-4, 4px);
+        .text-small {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  // primary button
+
+  .primary-button {
+    display: flex;
+    padding: 4px var(--padding-8, 8px);
+    justify-content: center;
+    align-items: center;
+
+    max-width: 358px;
+    width: 100%;
+    margin: auto;
+
+    border-radius: var(--border-4, 4px);
+    border: 1px solid transparent;
+    background: var(--color-primary, #1a4b8a);
+    color: var(--color-neutral-white, #fff);
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    transition: all 0.25s ease;
+    &:hover {
+      transition: all 0.25s ease;
+      background: color-mix(in srgb, var(--color-primary), #000 50%);
+      box-shadow: 2px 3px 13px -4px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 2px 3px 13px -4px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 2px 3px 13px -4px rgba(0, 0, 0, 0.75);
+    }
+  }
+}
+// light gray bg and it changes slick circle color
+.testimonials2--lightbg {
+  background: var(--color-background, #f0f3ff);
+  .testimonial-holder {
+    .slick-dots {
+      .slick-active button {
+        background-color: var(--color-primary, #1a4b8a);
+        transition: all 0.25s ease-in;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials2 {
+    h2 {
+      font-size: 40px;
+      line-height: 48px;
+    }
+    .wrapper {
+      gap: 60px;
+    }
+    .primary-button {
+      max-width: 260px;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .testimonials2 {
+    .wrapper h2 {
+      padding-top: 80px;
+    }
+    .testimonial-holder {
+      margin: 0px -10px;
+    }
+    .testimonial {
+      margin: 0px 10px;
+      opacity: 0.5;
+    }
+
+    .slick-active {
+      opacity: 0.8;
+    }
+    .slick-center {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .testimonials2 {
+    .testimonial-holder {
+      .slick-prev,
+      .slick-next {
+        border: 1px solid var(--neutral-grey-light, rgba(17, 17, 17, 0.07));
+        background: var(--neutral-white, #fff);
+      }
+    }
+    .testimonial-holder .slick-prev {
+      left: 0px;
+      width: 48px;
+      height: 48px;
+    }
+    .testimonial-holder .slick-next {
+      right: 0px;
+      width: 48px;
+      height: 48px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@media screen and (min-width: 768px) {
+  .marketingPage h1 {
+    font-size: 52px;
+    line-height: 56px;
+  }
+}
+.answer {
+  display: none;
+}
+* {
+  scroll-behavior: smooth;
+}
