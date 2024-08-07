@@ -158,149 +158,158 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  if ($(".hero-popup-form-content").length > 0) {
+  if (document.querySelectorAll(".hero-popup-form-content").length > 0) {
     initpopupForm();
   }
 
   function initpopupForm() {
     var currentFormIndex = 0;
-    var totalForms = $(".hero-popup-form-content").length;
+    var totalForms = document.querySelectorAll(".hero-popup-form-content").length;
 
     function showNextForm() {
       if (currentFormIndex < totalForms - 1) {
-        var $currentForm = $(".hero-popup-form-content").eq(currentFormIndex);
-        var $nextForm = $(".hero-popup-form-content").eq(currentFormIndex + 1);
-        $currentForm.hide();
-        $nextForm.show();
+        var currentForm = document.querySelectorAll(".hero-popup-form-content")[currentFormIndex];
+        var nextForm = document.querySelectorAll(".hero-popup-form-content")[currentFormIndex + 1];
+        currentForm.style.display = "none";
+        nextForm.style.display = "block";
         currentFormIndex++;
       } else if (currentFormIndex == totalForms - 1) {
-        var $currentForm = $(".hero-popup-form-content").eq(currentFormIndex);
-        $currentForm.hide();
+        var currentForm = document.querySelectorAll(".hero-popup-form-content")[currentFormIndex];
+        currentForm.style.display = "none";
         currentFormIndex = 0;
-        var $nextForm = $(".hero-popup-form-content").eq(0);
-        $nextForm.show();
+        var nextForm = document.querySelectorAll(".hero-popup-form-content")[0];
+        nextForm.style.display = "block";
       }
     }
     function showPreviousForm() {
       if (currentFormIndex <= totalForms - 1) {
-        var $currentForm = $(".hero-popup-form-content").eq(currentFormIndex);
-        var $previousForm = $(".hero-popup-form-content").eq(currentFormIndex - 1);
-        $currentForm.hide();
-        $previousForm.show();
+        var currentForm = document.querySelectorAll(".hero-popup-form-content")[currentFormIndex];
+        var previousForm = document.querySelectorAll(".hero-popup-form-content")[currentFormIndex - 1];
+        currentForm.style.display = "none";
+        previousForm.style.display = "block";
         currentFormIndex--;
       }
     }
-    $(".previous-question").on("click", function (e) {
-      showPreviousForm();
+    document.querySelectorAll(".previous-question").forEach(function (button) {
+      button.addEventListener("click", function (e) {
+        showPreviousForm();
+      });
     });
 
-    $(".close-form").on("click", function (e) {
-      $(".hero-popup-form").addClass("hidden");
-      document.body.classList.remove("overflow-hidden");
-    });
-    $(".open-popup").on("click", function (e) {
-      $(".hero-popup-form").removeClass("hidden");
-      document.body.classList.add("overflow-hidden");
+    document.querySelectorAll(".close-form").forEach(function (button) {
+      button.addEventListener("click", function (e) {
+        document.querySelector(".hero-popup-form").classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+      });
     });
 
-    $(".nextHeroForm").on("click", function (e) {
-      e.preventDefault();
-      var verifyform = false;
-      var $currentForm = $(".hero-popup-form-content").eq(currentFormIndex);
-      var formTitle = $currentForm.find(".form-question").text();
+    document.querySelectorAll(".open-popup").forEach(function (button) {
+      button.addEventListener("click", function (e) {
+        document.querySelector(".hero-popup-form").classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      });
+    });
 
-      if ($currentForm.hasClass("hero-pop-form-1")) {
-        var step1 = $(this).find(".form-option").text();
-        showNextForm();
-      } else if ($currentForm.hasClass("hero-pop-form-2")) {
-        showNextForm();
-      } else if ($currentForm.hasClass("hero-pop-form-3")) {
-        var step3 = $(this).find(".form-option").text();
-        showNextForm();
-      } else if ($currentForm.hasClass("hero-pop-form-4")) {
-        var step4 = $(this).find(".form-option").text();
-        showNextForm();
-      } else if ($currentForm.hasClass("hero-pop-form-5")) {
-        var step5 = $(this).find(".form-option").text();
-        showNextForm();
-      } else if ($currentForm.hasClass("hero-pop-form-6")) {
-        var step6 = $(this).find(".form-option").text();
-        showNextForm();
-      } else if ($currentForm.hasClass("hero-pop-form-7")) {
-        var step7 = $(this).find(".form-option").text();
-        showNextForm();
-      } else if ($currentForm.hasClass("hero-pop-form-8")) {
-        var additionalInfo = " ";
-        additionalInfo += $(".additional-details").val().trim();
-        formData["comments"] = additionalInfo;
-        showNextForm();
-      } else if ($currentForm.hasClass("hero-pop-form-9")) {
-        var emailValidation = false;
-        var fullnameValidation = false;
-        var $fullnameInput = $(".verify-fullname");
-        var $emailInput = $(".verify-email");
-        var phoneValidation = false;
-        var $phoneInput = $(".verify-phone");
-        var termsValidation = false;
-        var $termsCheckboxInput = $(".terms-and-privacy");
+    document.querySelectorAll(".nextHeroForm").forEach(function (button) {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+        var verifyform = false;
+        var currentForm = document.querySelectorAll(".hero-popup-form-content")[currentFormIndex];
+        // var formTitle = currentForm.querySelector(".form-question").textContent;
 
-        if ($fullnameInput.val().length > 0) {
-          formData["fullname"] = $(".verify-fullname").val().trim();
-          fullnameValidation = true;
-          $(".fullname-error").hide();
-        } else {
-          $fullnameInput.addClass("invalid-input");
-          $(".fullname-error").show();
-        }
-
-        if ($emailInput.val().length > 0) {
-          if ($emailInput[0].checkValidity()) {
-            formData["email"] = $(".verify-email").val().trim();
-
-            emailValidation = true;
-            $(".email-error").hide();
-            $(".error-check-valid").hide();
-          } else {
-            $(".error-check-valid").show();
-            $(".email-error").hide();
-          }
-        } else {
-          $(".email-error").show();
-          $(".error-check-valid").hide();
-        }
-
-        if ($phoneInput.val().length > 0) {
-          formData["phone"] = $(".verify-phone").val().trim();
-          phoneValidation = true;
-          $(".phone-error").hide();
-        } else {
-          $(".phone-error").show();
-        }
-
-        if ($termsCheckboxInput.is(":checked")) {
-          termsValidation = true;
-          $(".terms-error").hide();
-        } else {
-          $(".terms-error").show();
-        }
-
-        if (emailValidation && fullnameValidation && termsValidation) {
-          $(".hero-popup-form").addClass("hidden");
+        if (currentForm.classList.contains("hero-pop-form-1")) {
+          var step1 = this.querySelector(".form-option").textContent;
           showNextForm();
-          submitLead(formData, "form");
+        } else if (currentForm.classList.contains("hero-pop-form-2")) {
+          showNextForm();
+        } else if (currentForm.classList.contains("hero-pop-form-3")) {
+          var step3 = this.querySelector(".form-option").textContent;
+          showNextForm();
+        } else if (currentForm.classList.contains("hero-pop-form-4")) {
+          var step4 = this.querySelector(".form-option").textContent;
+          showNextForm();
+        } else if (currentForm.classList.contains("hero-pop-form-5")) {
+          var step5 = this.querySelector(".form-option").textContent;
+          showNextForm();
+        } else if (currentForm.classList.contains("hero-pop-form-6")) {
+          var step6 = this.querySelector(".form-option").textContent;
+          showNextForm();
+        } else if (currentForm.classList.contains("hero-pop-form-7")) {
+          var step7 = this.querySelector(".form-option").textContent;
+          showNextForm();
+        } else if (currentForm.classList.contains("hero-pop-form-8")) {
+          var additionalInfo = " ";
+          additionalInfo += document.querySelector(".additional-details").value.trim();
+          formData["comments"] = additionalInfo;
+          showNextForm();
+        } else if (currentForm.classList.contains("hero-pop-form-9")) {
+          var emailValidation = false;
+          var fullnameValidation = false;
+          var fullnameInput = document.querySelector(".verify-fullname");
+          var emailInput = document.querySelector(".verify-email");
+          var phoneValidation = false;
+          var phoneInput = document.querySelector(".verify-phone");
+          var termsValidation = false;
+          var termsCheckboxInput = document.querySelector(".terms-and-privacy");
+
+          if (fullnameInput.value.length > 0) {
+            formData["fullname"] = document.querySelector(".verify-fullname").value.trim();
+            fullnameValidation = true;
+            document.querySelector(".fullname-error").style.display = "none";
+          } else {
+            fullnameInput.classList.add("invalid-input");
+            document.querySelector(".fullname-error").style.display = "block";
+          }
+
+          if (emailInput.value.length > 0) {
+            if (emailInput.checkValidity()) {
+              formData["email"] = document.querySelector(".verify-email").value.trim();
+
+              emailValidation = true;
+              document.querySelector(".email-error").style.display = "none";
+              document.querySelector(".error-check-valid").style.display = "none";
+            } else {
+              document.querySelector(".error-check-valid").style.display = "block";
+              document.querySelector(".email-error").style.display = "none";
+            }
+          } else {
+            document.querySelector(".email-error").style.display = "block";
+            document.querySelector(".error-check-valid").style.display = "none";
+          }
+
+          if (phoneInput.value.length > 0) {
+            formData["phone"] = document.querySelector(".verify-phone").value.trim();
+            phoneValidation = true;
+            document.querySelector(".phone-error").style.display = "none";
+          } else {
+            document.querySelector(".phone-error").style.display = "block";
+          }
+
+          if (termsCheckboxInput.checked) {
+            termsValidation = true;
+            document.querySelector(".terms-error").style.display = "none";
+          } else {
+            document.querySelector(".terms-error").style.display = "block";
+          }
+
+          if (emailValidation && fullnameValidation && termsValidation) {
+            document.querySelector(".hero-popup-form").classList.add("hidden");
+            showNextForm();
+            submitLead(formData, "form");
+          }
         }
-      }
+      });
     });
   }
 });
 
 function checkInput() {
-  if ($(".map-input").val().trim() !== "") {
-    $(".addressbtn").removeClass("hidden");
+  if (document.querySelector(".map-input").value.trim() !== "") {
+    document.querySelector(".addressbtn").classList.remove("hidden");
   } else {
-    $(".addressbtn").addClass("hidden");
+    document.querySelector(".addressbtn").classList.add("hidden");
   }
 }
-$(".map-input").on("input", function () {
+document.querySelector(".map-input").addEventListener("input", function () {
   checkInput();
 });

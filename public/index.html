@@ -53,8 +53,10 @@
     <link rel="stylesheet" type="text/css" href="./Expert Roof Installation Services in Feasterville Trevose, PA_files/css-adjusments.css" />
     <link rel="stylesheet" type="text/css" href="sectionscss/style.css" />
 
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="./mapstyle.css" />
+    <script src=".//js/app.js" type="module"></script>
+
     <style>
       .grecaptcha-badge {
         visibility: hidden !important;
@@ -156,7 +158,7 @@
           </div>
           <div class="wrapperTail relative z-40 flex lg:flex-row flex-col justify-between gap-[20px] max-w-[1440px] mx-auto lg:px-[130px] px-[16px]">
             <div class="hero-left flex flex-col items-center">
-              <h1 class="max-w-[700px] text-[52px] leading-[56px] font-[700] tracking-[-.4px] text-[#fff] text-center max-[375px]:text-[30px]">Roofing and Siding in Pennsylvania & New Jersey</h1>
+              <h1 class="max-w-[700px] md:text-[52px] md:leading-[56px] text-[40px] font-[700] tracking-[-.4px] text-[#fff] text-center max-[375px]:text-[30px]">Roofing and Siding in Pennsylvania & New Jersey</h1>
               <a class="my-[20px] mx-[auto] rounded-[10px] py-4 text-center block w-full max-w-[300px] text-[#fff] bg-[#6a399e] text-[23px] font-[700] animate-bg" href="#form">BOOK ONLINE TODAY</a>
 
               <div class="hero-benefits flex md:flex-row flex-col flex-wrap max-w-[700px] px-[10px] py-[5px] border-solid border-white/50 border-y md:gap-2 gap-4 justify-between">
@@ -191,7 +193,7 @@
           </div>
         </div>
 
-        <div class="hero-popup-form fixed inset-0 z-40 bg-black/50 overflow-y-scroll hidden">
+        <div class="hero-popup-form hidden fixed inset-0 z-40 bg-black/50 overflow-y-scroll">
           <form class="fixed flex justify-center items-center inset-0 md:block md:inset-[unset] md:absolute md:top-[50%] md:right-[50%] md:translate-x-[50%] md:translate-y-[-50%] md:max-w-[635px] w-full bg-[#fff] overflow-auto p-10 pb-0 max-[375px]:px-[16px] max-[375px]:pt-[40px] z-50">
             <input type="hidden" name="hash" value="055d537e-04a3-49b8-b6bb-dcab2a529473" />
             <img class="close-form cursor-pointer absolute top-[10px] right-[10px]" src="img/close.svg" alt="close form" />
@@ -252,8 +254,25 @@
 
                 <p class="text-[#28373e] text-[20px] font-[700]">What's your address?</p>
               </div>
-              <div>
-                <a class="nextHeroForm py-4 px-4 bg-[#28373e] hover:bg-[#007aff] transition-all text-[#fff] text-[16px] leading-[16px] font-[600] rounded-[20px] flex justify-center items-center max-w-[312px] mx-auto mt-4" href="#">Continue</a>
+
+              <gmpx-api-loader key="AIzaSyDfS5KcLJEX6DAF_cpqAbI3y_ANq-OOrpU" solution-channel="GMP_QB_addressselection_v3_cAB"> </gmpx-api-loader>
+              <div class="main-container grid gap-[15px] max-w-[100%]">
+                <div>
+                  <label for="address" class="relative">
+                    <input class="map-input w-full border-[1px] border-[#ced4da] focus:border-sky-500 rounded-[4px] pl-[25px] py-[7px] text-[14px]" type="text" placeholder="Enter your street address" id="location-input" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#74838B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search absolute left-[5px] top-[50%] translate-y-[-50%]">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                  </label>
+                </div>
+                <gmp-map class="h-[350px] w-full">
+                  <gmp-advanced-marker></gmp-advanced-marker>
+                </gmp-map>
+              </div>
+
+              <div class="mt-5">
+                <a class="nextHeroForm addressbtn hidden py-4 px-4 bg-[#28373e] hover:bg-[#007aff] transition-all text-[#fff] text-[16px] leading-[16px] font-[600] rounded-[20px] flex justify-center items-center max-w-[312px] mx-auto mt-4" href="#">Continue</a>
               </div>
             </div>
             <div class="hero-popup-form-content hero-pop-form-3 h-full overflow-y-scroll no-scrollbar pb-10" style="display: none">
@@ -2160,7 +2179,7 @@
       </div>
       <div id="svelte-announcer" aria-live="assertive" aria-atomic="true" style="position: absolute; left: 0px; top: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); overflow: hidden; white-space: nowrap; width: 1px; height: 1px"></div>
     </div>
-    <script src="js/hero-form.js"></script>
+    <script src="js/hero-form-vanila.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

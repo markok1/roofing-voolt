@@ -1,0 +1,49 @@
+/* .main-container {
+  display: grid;
+  gap: 8px;
+  max-width: 400px;
+} */
+
+/* gmpx-split-layout:not(:defined) {
+  visibility: hidden;
+} */
+
+/* gmp-map {
+  height: 350px;
+  width: 100%;
+} */
+
+/* .panel {
+  background: white;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+} */
+
+/* .half-input-container {
+  display: flex;
+  justify-content: space-between;
+} */
+
+/* .map-input {
+  height: 30px;
+  width: 100%;
+} */
+
+/* .map-input {
+  border: 0;
+  border: 1px solid black;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  padding-left: 15px;
+} */
+
+/* .map-input:focus::placeholder {
+  color: white;
+} */
