@@ -278,10 +278,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (emailValidation && fullnameValidation) {
-          $(".hero-popup-form").addClass("hidden");
           showNextForm();
           submitLead(formData, "form");
         }
+      } else if ($currentForm.hasClass("hero-pop-form-10")) {
+        $(".hero-popup-form").addClass("hidden");
       }
     });
   }

@@ -286,10 +286,11 @@ document.addEventListener("DOMContentLoaded", function () {
           }
 
           if (emailValidation && fullnameValidation) {
-            document.querySelector(".hero-popup-form").classList.add("hidden");
             showNextForm();
             submitLead(formData, "form");
           }
+        } else if (currentForm.classList.contains("hero-pop-form-10")) {
+          document.querySelector(".hero-popup-form").classList.add("hidden");
         }
       });
     });

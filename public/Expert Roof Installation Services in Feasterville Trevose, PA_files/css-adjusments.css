@@ -10,3 +10,6 @@
 * {
   scroll-behavior: smooth;
 }
+.error-border {
+  border: 1px solid #f04738 !important;
+}
