@@ -285,14 +285,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector(".phone-error").style.display = "block";
           }
 
-          if (termsCheckboxInput.checked) {
-            termsValidation = true;
-            document.querySelector(".terms-error").style.display = "none";
-          } else {
-            document.querySelector(".terms-error").style.display = "block";
-          }
-
-          if (emailValidation && fullnameValidation && termsValidation) {
+          if (emailValidation && fullnameValidation) {
             document.querySelector(".hero-popup-form").classList.add("hidden");
             showNextForm();
             submitLead(formData, "form");

@@ -277,14 +277,7 @@ document.addEventListener("DOMContentLoaded", function () {
           $(".phone-error").show();
         }
 
-        if ($termsCheckboxInput.is(":checked")) {
-          termsValidation = true;
-          $(".terms-error").hide();
-        } else {
-          $(".terms-error").show();
-        }
-
-        if (emailValidation && fullnameValidation && termsValidation) {
+        if (emailValidation && fullnameValidation) {
           $(".hero-popup-form").addClass("hidden");
           showNextForm();
           submitLead(formData, "form");

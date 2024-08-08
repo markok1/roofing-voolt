@@ -968,6 +968,31 @@ video {
   border-color: rgb(255 255 255 / 0.5);
 }
 
+.border-\[\#116BB0\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(17 107 176 / var(--tw-border-opacity));
+}
+
+.border-\[\#255f8c\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(37 95 140 / var(--tw-border-opacity));
+}
+
+.border-\[\#173f5e\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(23 63 94 / var(--tw-border-opacity));
+}
+
+.bg-\[\#116BB0\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 107 176 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#116bb0\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 107 176 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#28373e\] {
   --tw-bg-opacity: 1;
   background-color: rgb(40 55 62 / var(--tw-bg-opacity));
@@ -1009,6 +1034,43 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#116BB0C4\] {
+  background-color: #116BB0C4;
+}
+
+.bg-\[\#116BB000\] {
+  background-color: #116BB000;
+}
+
+.bg-\[\#116BB0ff\] {
+  background-color: #116BB0ff;
+}
+
+.bg-\[\#41a2edc4\] {
+  background-color: #41a2edc4;
+}
+
+.bg-\[\#41a2edd0\] {
+  background-color: #41a2edd0;
+}
+
+.bg-\[\#41a2ed99\] {
+  background-color: #41a2ed99;
+}
+
+.bg-\[\#9bd4ff99\] {
+  background-color: #9bd4ff99;
+}
+
+.bg-\[\#38a5f899\] {
+  background-color: #38a5f899;
+}
+
+.bg-\[\#173f5e\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 63 94 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\/img\/asphalt\.jpg\'\)\] {
@@ -1336,6 +1398,18 @@ video {
   transition-duration: 150ms;
 }
 
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 .after\:ml-0\.5::after {
   content: var(--tw-content);
   margin-left: 0.125rem;
@@ -1383,8 +1457,18 @@ video {
   background-color: rgb(243 248 253 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-\[\#fff\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .hover\:to-35\%:hover {
   --tw-gradient-to-position: 35%;
+}
+
+.hover\:text-\[\#173f5e\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(23 63 94 / var(--tw-text-opacity));
 }
 
 .focus\:border-\[\#28373e\]:focus {
