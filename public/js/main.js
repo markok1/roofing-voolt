@@ -413,8 +413,8 @@ document.addEventListener("DOMContentLoaded", function () {
             submitLead(formData, "form");
           }
         } else if (currentForm.classList.contains("hero-pop-form-10")) {
+          document.body.classList.remove("overflow-hidden");
           document.querySelector(".hero-popup-form").classList.add("hidden");
-          document.body.classList.add("overflow-hidden");
         }
       });
     });
