@@ -283,6 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       } else if ($currentForm.hasClass("hero-pop-form-10")) {
         $(".hero-popup-form").addClass("hidden");
+        document.body.classList.add("overflow-hidden");
       }
     });
   }
