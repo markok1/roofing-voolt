@@ -119,6 +119,15 @@ $(document).ready(function () {
   });
 });
 
+$(".burger-menu").on("click", function (e) {
+  e.preventDefault();
+  $(".nav-menu").addClass("nav-active");
+});
+$(".close-menu").on("click", function (e) {
+  e.preventDefault();
+  $(".nav-menu").removeClass("nav-active");
+});
+
 // old form
 
 document.addEventListener("DOMContentLoaded", function () {
